@@ -4,6 +4,36 @@ function initial(){
   var pic;
 pic = document.getElementById('marblePic44'); 
           pic.style.visibility="hidden";
+          for(j=3; j<6; j++){
+pic = document.getElementById('marblePic'+1+j); 
+          pic.style.visibility="visible";
+pic = document.getElementById('marblePic'+2+j); 
+          pic.style.visibility="visible";
+pic = document.getElementById('marblePic'+6+j); 
+          pic.style.visibility="visible";
+pic = document.getElementById('marblePic'+7+j); 
+          pic.style.visibility="visible";    
+ }
+
+ for(j=1; j<8; j++){
+pic = document.getElementById('marblePic'+3+j); 
+          pic.style.visibility="visible";
+pic = document.getElementById('marblePic'+5+j); 
+          pic.style.visibility="visible";
+
+ }
+
+for(j=1; j<4; j++){
+pic = document.getElementById('marblePic'+4+j); 
+          pic.style.visibility="visible";
+}
+for(j=5; j<8; j++){
+pic = document.getElementById('marblePic'+4+j); 
+          pic.style.visibility="visible";
+
+ }
+
+
 }
 
 initial();
@@ -82,6 +112,7 @@ pic1 = document.getElementById('marblePic'+row1+col1);
 pic2 = document.getElementById('marblePic'+row2+col2); 
 if(pic1.style.visibility=="hidden") return 0;
 if(pic2.style.visibility=="visible") return 0;
+
 
 if(row1==row2+1) return 0;
 if(col1==col2+1) return 0;
