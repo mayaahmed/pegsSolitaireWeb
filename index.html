@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--  Programmer : Maya Ahmed 
+      Files: index.html; pegs.css; pegs.js 
+      These files contains the codes for the Soduku game
+      Date: "Aug 23 2016" -->
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Punjiri: Web and Mobile Technologies.</title>
+		<link rel="stylesheet" type="text/css" href="pegs.css">
+	</head>
+
+	<body>
+		<div id="big_wrapper">
+          <div id="topStuff">
+          <header id="top_header">
+				<p> Pegs Solitaire</p>
+			</header>
+			<nav id="top_menu">
+				<ul>
+<li>
+                <a href="index.html"> New Game</a>
+</li>
+                  <li>
+                    <div id="myNav" class="overlay">
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
+                      <div class="overlay-content">
+                       <p> &copy; Punjiri Web and Mobile Technologies, 2016. </p>
+                       <p> Email: maya.ahmed@gmail.com</p>
+                      </div>
+                    </div>
+
+                    <span style="font-size:30px; cursor:pointer" onclick="openNav()"> &equiv;</span>
+                  </li>
+                                    
+                </ul>
+			</nav>
+            </div>
+     
+
+<section id="main_section">   
+
+ <div id="container">
+      
+<div class="cell"  id="cell13" onclick="getCell(1,3)">
+<img class="img-circle" src="marbles.png" id="marblePic13" draggable="true" height="50" width="50">
+</div>
+
+<div class="cell"  id="cell14" onclick="getCell(1,4)">
+<img class="img-circle" src="marbles.png" id="marblePic14"  draggable="true" height="50" width="50"></div>
+
+
+
+<div class="cell"  id="cell15" onclick="getCell(1,5)">
+<img class="img-circle" src="marbles.png" id="marblePic15" draggable="true" height="50" width="50"> </div>
+
+
+<div class="cell"  id="cell23" onclick="getCell(2,3)">
+<img class="img-circle" src="marbles.png" id="marblePic23" draggable="true"  height="50" width="50"> 
+ </div>
+       
+<div class="cell"  id="cell24" onclick="getCell(2,4)">
+<img class="img-circle" src="marbles.png" id="marblePic24" draggable="true"  height="50" width="50"> 
+</div>
+    
+<div class="cell"  id="cell25" onclick="getCell(2,5)">
+<img class="img-circle" src="marbles.png" id="marblePic25" draggable="true" height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell31" onclick="getCell(3,1)">
+<img class="img-circle" src="marbles.png" id="marblePic31"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell32" onclick="getCell(3,2)">
+<img class="img-circle" src="marbles.png" id="marblePic32"  height="50" width="50">
+</div>
+    
+<div class="cell"  id="cell33"onclick="getCell(3,3)">
+<img class="img-circle" src="marbles.png" id="marblePic33"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell34" onclick="getCell(3,4)">
+<img class="img-circle" src="marbles.png" id="marblePic34"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell35" onclick="getCell(3,5)">
+<img class="img-circle" src="marbles.png" id="marblePic35"  height="50" width="50">
+</div>
+    
+<div class="cell"  "cell36" onclick="getCell(3,6)">
+<img class="img-circle" src="marbles.png" id="marblePic36"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell37" onclick="getCell(3,7)">
+<img class="img-circle" src="marbles.png" id="marblePic37"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell41" onclick="getCell(4,1)" >
+<img class="img-circle" src="marbles.png" id="marblePic41"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell42"  onclick="getCell(4,2)" >
+<img class="img-circle" src="marbles.png" id="marblePic42"  height="50" width="50">
+</div>
+    
+<div class="cell"  id="cell43"  onclick="getCell(4,3)">
+<img class="img-circle" src="marbles.png" id="marblePic43"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell44"  onclick="getCell(4,4)">
+<img class="img-circle" src="marbles.png" id="marblePic44"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell45"  onclick="getCell(4,5)">
+<img class="img-circle" src="marbles.png" id="marblePic45"  height="50" width="50">
+</div>
+    
+<div class="cell"  id="cell46"  onclick="getCell(4,6)">
+<img class="img-circle" src="marbles.png" id="marblePic46"  height="50" width="50">
+</div>
+<div class="cell"  id="cell47"  onclick="getCell(4,7)">
+<img class="img-circle" src="marbles.png" id="marblePic47"  height="50" width="50">
+</div>
+<div class="cell"  id="cell51"  onclick="getCell(5,1)">
+<img class="img-circle" src="marbles.png" id="marblePic51"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell52" onclick="getCell(5,2)">
+<img class="img-circle" src="marbles.png" id="marblePic52"  height="50" width="50">
+</div>
+    
+<div class="cell"  id="cell53" onclick="getCell(5,3)">
+<img class="img-circle" src="marbles.png" id="marblePic53"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell54" onclick="getCell(5,4)">
+<img class="img-circle" src="marbles.png" id="marblePic54"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell55" onclick="getCell(5,5)">
+<img class="img-circle" src="marbles.png" id="marblePic55"  height="50" width="50">
+</div>
+    
+<div class="cell"  id="cell56" onclick="getCell(5,6)">
+<img class="img-circle" src="marbles.png" id="marblePic56"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell57" onclick="getCell(5,7)">
+<img class="img-circle" src="marbles.png" id="marblePic57"  height="50" width="50">
+</div>
+       
+
+    
+<div class="cell"  id="cell63" onclick="getCell(6,3)">
+<img class="img-circle" src="marbles.png" id="marblePic63"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell64" onclick="getCell(6,4)">
+<img class="img-circle" src="marbles.png" id="marblePic64"  height="50" width="50">
+</div>
+    
+<div class="cell"  id="cell65" onclick="getCell(6,5)">
+<img class="img-circle" src="marbles.png" id="marblePic65"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell73" onclick="getCell(7,3)">
+<img class="img-circle" src="marbles.png" id="marblePic73"  height="50" width="50">
+</div>
+       
+<div class="cell"  id="cell74" onclick="getCell(7,4)">
+<img class="img-circle" src="marbles.png" id="marblePic74"  height="50" width="50">
+</div>
+    
+<div class="cell"  id="cell75" onclick="getCell(7,5)">
+<img class="img-circle" src="marbles.png" id="marblePic75"  height="50" width="50">
+</div>
+
+
+</div>
+</section>
+</div>
+ <script src="pegs.js"></script> 
+      
+</body>
+</html>
