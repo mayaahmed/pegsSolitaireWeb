@@ -52,11 +52,18 @@ else if(status==1) status=0;
 }
 
 function run(){
-  if (count==1) alert('Congratulations! You win');
+
   var test;
   test=checkValidMove();
-  if(test==1)
+  if(test==1){
   move();
+  if (count==1){ 
+   applaud();
+alert('Congratulations! You win');
+ 
+}
+  
+  }
   else if(test==0){
     // alert('Invalid Move, r1 c1 r2 c2: '+row1+col1+row2+col2); 
     alert('Invalid Move. Try again'); 
@@ -158,6 +165,11 @@ if(col1==col2-2){
 
 
 return 1;
+}
+
+function applaud(){
+var audio = new Audio('applause.mp3');
+audio.play();
 }
 
 
